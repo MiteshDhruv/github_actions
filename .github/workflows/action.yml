@@ -13,4 +13,12 @@ jobs:
     steps:
        - uses: actions/checkout@v2
        - name: Echo Github Actions
-         run: echo "HELLO world to GITHUB ACTIONS"
+         run: ls -al
+
+  post-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: "echo postbuiilds steps"
+        run: echo "POSTBUILDS STEPS AFTER EXECUTION OF ABOVE STEPS"
+    
