@@ -7,13 +7,19 @@ on:
         - master
 
 
+env: 
+  NAME: "MITESH DHRUV"
+  PROFESSION: "DEVOPS ENTHUSIAST"
+  PASSION: "DEVOPS ENGINEERING"
+
+
 jobs:
   builds:
     runs-on: ubuntu-latest
     steps:
        - uses: actions/checkout@v2
        - name: Echo Github Actions
-         run: ls -al
+         run: "Hie, this is $NAME. I am a $PROFESSION by profession & $PASSION is my passion"
 
   post-build:
     runs-on: ubuntu-latest
